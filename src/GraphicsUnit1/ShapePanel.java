@@ -29,10 +29,7 @@ public class ShapePanel extends JPanel
 	{
 		paint(window);
 	}
-
-	/*
-	 *All of your test code should be placed in paint.
-	 */
+        
 	public void paint(Graphics window)
 	{
 		window.setColor(Color.WHITE);
@@ -42,14 +39,9 @@ public class ShapePanel extends JPanel
 		window.setFont(new Font("TAHOMA",Font.BOLD,18));
 		window.drawString("CREATE YOUR OWN SHAPE!",40,40);
 
+                                    Shape newShape = new Shape(100, 100, 100, 100, Color.black);
+                                    newShape.draw(window);
+                                            
 
-		//instantiate a Shape
-		//tell your shape to draw
-
-		//instantiate a Shape
-		//tell your shape to draw
-
-		//instantiate a Shape
-		//tell your shape to draw
 	}
 }

@@ -18,29 +18,57 @@ public class Shape
 	private int yPos;
 	private int width;
 	private int height;
-	private Color color;
+	private Color color = Color.MAGENTA;
 
    public Shape(int x, int y, int wid, int ht, Color col)
    {
 		xPos = x;
-		//finish this constructor
+		yPos = y;
+		width = wid;
+		height = ht;
+                                    color = col;
    }
 
 
    public void draw(Graphics window)
    {
       window.setColor(color);
-      window.fillRect(xPos, yPos, width, height);
-
-      //draw whatever you want
-      //    ^
-      //  [ :: ]
-      //    ()
-
+      window.drawRect(xPos, yPos, width, height);
+      window.fillOval(xPos, yPos, width, height);
+      window.drawLine(xPos, yPos+ height, xPos + width, yPos);
+      window.drawLine(xPos, yPos, xPos + width, yPos + height);
+      newShape1(xPos,yPos,width,height, color, window);
+      
+      newShape2(xPos,yPos,width,height, color, window);
+   }
+   
+   public static void newShape1(int xPos, int yPos, int width, int height, Color color, Graphics window){
+       xPos += 150;
+       yPos += 150;
+       width += 150;
+       height += 150;
+       color = Color.BLUE;
+       
+      window.setColor(color);
+      window.drawRect(xPos, yPos, width, height);
+      window.fillOval(xPos, yPos, width, height);
+      window.drawLine(xPos, yPos+ height, xPos + width, yPos);
+      window.drawLine(xPos, yPos, xPos + width, yPos + height);
+   }
+      public static void newShape2(int xPos, int yPos, int width, int height, Color color, Graphics window){
+       xPos += 400;
+       yPos += 50;
+       width /= 5;
+       height /= 5;
+       color = Color.MAGENTA;
+       
+      window.setColor(color);
+      window.drawRect(xPos, yPos, width, height);
+      window.fillOval(xPos, yPos, width, height);
+      window.drawLine(xPos, yPos+ height, xPos + width, yPos);
+      window.drawLine(xPos, yPos, xPos + width, yPos + height);
    }
 
-   //BONUS
-   //add in set and get methods for all instance variables
 
    public String toString()
    {

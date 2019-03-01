@@ -26,27 +26,35 @@ public class SmileyFace extends Canvas
       window.setColor(Color.BLACK);
       window.drawString("SMILEY FACE LAB ", 35, 35);
 
-      window.setColor(Color.GREEN);
+      window.setColor(Color.yellow);
       window.fillOval( 210, 100, 400, 400 );
       
       window.setColor(Color.white);
       window.fillOval( 250, 200, 100, 100 );
       
-      window.setColor(Color.white);
       window.fillOval( 450, 200, 100, 100 );
  
-      window.setColor(Color.black);
+      window.setColor(Color.BLACK);
       window.fillOval( 260, 210, 80, 80 );
       
-      window.setColor(Color.black);
       window.fillOval( 460, 210, 80, 80 );
       
-      window.setColor(Color.white);
-      window.fillOval( 260, 210, 10, 10 );
+      window.drawArc(255, 195, 100, 100, 0,90);
+      
+      window.drawArc(445, 195, 100, 100, 90,90);
       
       window.setColor(Color.white);
-      window.fillOval( 470, 220, 10, 10 );
+      window.fillOval( 268, 218, 15, 15 );
+      
+      window.fillOval( 468, 218, 15, 15 );
 
-
+      window.setColor(Color.BLACK);
+      window.fillOval(270,350, 300,50);
+      
+      window.setColor(Color.yellow);
+      window.fillRect(270,350, 310,30);
+      
+      window.setColor(Color.white);
+      window.fillRect(450,380, 20,30);
    }
 }
