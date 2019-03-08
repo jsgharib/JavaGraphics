@@ -38,7 +38,6 @@ public class Shape
       window.drawLine(xPos, yPos+ height, xPos + width, yPos);
       window.drawLine(xPos, yPos, xPos + width, yPos + height);
       newShape1(xPos,yPos,width,height, color, window);
-      
       newShape2(xPos,yPos,width,height, color, window);
    }
    
